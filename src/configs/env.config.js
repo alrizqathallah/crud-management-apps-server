@@ -20,6 +20,25 @@ const getKeyValue = (key, defaultValue) => {
 };
 
 /**
+ * @typedef {Object} EnvConfig
+ * @property {number} PORT
+ * @property {string} NODE_ENV
+ * @property {string} BASE_PATH
+ * @property {string} DB_NAME
+ * @property {string} DB_USER
+ * @property {string} DB_PASSWORD
+ * @property {string} DB_HOST
+ * @property {number} DB_PORT
+ * @property {string} DB_DIALECT
+ * @property {string} JWT_ACCESS_SECRET
+ * @property {string} JWT_REFRESH_SECRET
+ * @property {string} JWT_EXPIRES_IN
+ * @property {string} JWT_REFRESH_EXPIRES_IN
+ */
+
+/** @type {EnvConfig} */
+
+/**
  * Konfigurasi environment aplikasi
  * Semua variabel penting dikumpulkan disini agar terpusat
  */
