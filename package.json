@@ -1,0 +1,62 @@
+{
+  "name": "server",
+  "version": "1.0.0",
+  "description": "CRUD Management Application implementing RESTful API using Express and Sequelize.",
+  "main": "./src/server.js",
+  "type": "module",
+  "scripts": {
+    "dev": "nodemon ./src/server.js",
+    "start": "node ./src/server.js",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint": "eslint ./src/**/*.js",
+    "lint:fix": "eslint ./src/**/*.js --fix",
+    "format": "prettier --write ./src/**/*.js",
+    "prepare": "husky"
+  },
+  "lint-staged": {
+    "./src/**/*.js": [
+      "eslint",
+      "eslint --fix",
+      "prettier --write"
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alrizqathallah/crud-management-apps-server.git"
+  },
+  "keywords": [
+    "CRUD",
+    "RESTful",
+    "API",
+    "Express",
+    "Sequelize",
+    "MySQL"
+  ],
+  "author": "Alrizq Athallah Sulung Esa",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/alrizqathallah/crud-management-apps-server/issues"
+  },
+  "homepage": "https://github.com/alrizqathallah/crud-management-apps-server#readme",
+  "dependencies": {
+    "bcrypt": "^6.0.0",
+    "dotenv": "^17.2.3",
+    "express": "^5.1.0",
+    "sequelize": "^6.37.7"
+  },
+  "devDependencies": {
+    "@eslint/eslintrc": "^3.3.1",
+    "@eslint/js": "^9.37.0",
+    "eslint": "^9.37.0",
+    "eslint-config-prettier": "^10.1.8",
+    "eslint-plugin-import": "^2.32.0",
+    "eslint-plugin-prettier": "^5.5.4",
+    "husky": "^9.1.7",
+    "lint-staged": "^16.2.3",
+    "nodemon": "^3.1.10",
+    "prettier": "^3.6.2"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}
