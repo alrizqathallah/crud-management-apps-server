@@ -12,7 +12,7 @@ export default [
       ecmaVersion: "latest",
       sourceType: "module",
       globals: {
-        console: "readonly", // ✅ Mengizinkan penggunaan console
+        console: "readonly", // ✅ Boleh pakai console.log
         process: "readonly", // ✅ Untuk dotenv dan environment
         __dirname: "readonly",
         __filename: "readonly",
@@ -23,22 +23,17 @@ export default [
       prettier: pluginPrettier,
     },
     rules: {
-      // Gunakan konfigurasi Prettier eksternal (.prettierrc)
-      ...configPrettier.rules,
+      // ✅ Integrasi Prettier (pakai .prettierrc eksternal)
       "prettier/prettier": "error",
 
-      // Aturan umum
+      // ✅ Aturan umum
       "no-unused-vars": ["warn", { argsIgnorePattern: "^_" }],
       "no-console": "off",
 
-      // Aturan tambahan untuk import
-      "import/order": [
-        "warn",
-        {
-          groups: [["builtin", "external", "internal"]],
-          alphabetize: { order: "asc", caseInsensitive: true },
-        },
-      ],
+      // ❌ Matikan aturan import/order
+      "import/order": "off",
     },
   },
+  // Letakkan config Prettier di akhir agar override aturan gaya
+  configPrettier,
 ];
